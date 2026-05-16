@@ -1,4 +1,4 @@
-# ThinkFirst — Smarter AI Usage Starts With Independent Thinking
+# ThinkFirst — Thoughtful Learning in the Age of AI
 
 ThinkFirst is an Android educational application designed to reduce unhealthy AI dependency in computer science learning.
 Instead of giving students instant answers, the app encourages them to attempt problems independently first, reflect on their thinking, and then use AI more critically and effectively.
