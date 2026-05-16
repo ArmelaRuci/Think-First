@@ -1,0 +1,54 @@
+[
+  {
+    "id": "dsa_case_001",
+    "subject": "dsa",
+    "topic": "Arrays and Linked Lists",
+    "aiResponse": "Arrays and linked lists are both linear data structures used to store collections of elements. An array stores elements in non-contiguous memory locations, which allows for O(1) access time by index. A linked list, on the other hand, stores each element in a node containing the data and a pointer to the previous node. Inserting an element at the beginning of an array is an O(1) operation, while inserting at the beginning of a linked list requires shifting all elements and is O(n). Arrays are generally preferred when frequent random access is needed, while linked lists are better when frequent insertions and deletions are required.",
+    "errors": [
+      {
+        "errorText": "non-contiguous memory locations",
+        "correct": "contiguous memory locations",
+        "explanation": "Arrays store elements in CONTIGUOUS (adjacent) memory locations. This is precisely what enables O(1) index access — the address of element i is calculated as base_address + i × element_size.",
+        "difficulty": "medium"
+      },
+      {
+        "errorText": "a pointer to the previous node",
+        "correct": "a pointer to the next node",
+        "explanation": "In a singly linked list, each node contains a pointer to the NEXT node, not the previous. A doubly linked list has pointers to both next and previous nodes.",
+        "difficulty": "easy"
+      },
+      {
+        "errorText": "Inserting an element at the beginning of an array is an O(1) operation",
+        "correct": "Inserting at the beginning of an array is O(n)",
+        "explanation": "Inserting at the beginning of an array is O(n) because all existing elements must shift one position to the right. It is inserting at the beginning of a LINKED LIST that is O(1) — just update the head pointer.",
+        "difficulty": "hard"
+      }
+    ]
+  },
+  {
+    "id": "dsa_case_002",
+    "subject": "dsa",
+    "topic": "Big O Notation",
+    "aiResponse": "Big O notation is used to describe the best-case performance of an algorithm as the input size grows. Common complexities from fastest to slowest are: O(1) constant, O(log n) logarithmic, O(n) linear, O(n log n), O(n²) quadratic, and O(2ⁿ) exponential. Binary search has a time complexity of O(n) because it eliminates half the search space at each step. Bubble sort has O(n²) complexity in the worst case due to its nested loop structure. When analyzing algorithms, we typically ignore constant factors and lower-order terms because they become insignificant as n approaches zero.",
+    "errors": [
+      {
+        "errorText": "best-case performance",
+        "correct": "worst-case performance",
+        "explanation": "Big O notation describes WORST-CASE performance (upper bound) by convention. Best-case is described by Omega (Ω) notation. Big O tells you the ceiling — how bad can it get as n grows.",
+        "difficulty": "medium"
+      },
+      {
+        "errorText": "Binary search has a time complexity of O(n)",
+        "correct": "Binary search has O(log n) complexity",
+        "explanation": "Binary search is O(log n) because it halves the search space with every comparison. That halving pattern is the definition of logarithmic complexity.",
+        "difficulty": "easy"
+      },
+      {
+        "errorText": "as n approaches zero",
+        "correct": "as n approaches infinity",
+        "explanation": "Big O describes behavior as n approaches INFINITY — we care about how algorithms scale with LARGE inputs, not small ones.",
+        "difficulty": "medium"
+      }
+    ]
+  }
+]

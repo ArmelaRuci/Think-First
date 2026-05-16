@@ -1,0 +1,62 @@
+[
+  {
+    "id": "dbms_001",
+    "subject": "dbms",
+    "chapter": "Keys & Constraints",
+    "difficulty": 1,
+    "question": "What is a primary key in a database? Why is it important and what rules must it follow?",
+    "keywords": ["unique / uniquely identifies", "null / not null / cannot be null", "foreign key / relationship", "one per table / single primary key"],
+    "keyConcepts": ["Uniquely identifies each row in a table", "Cannot be NULL - must always have a value", "Only one primary key per table", "Used as the reference target for foreign keys"],
+    "hintTier1": "Think about what makes a record uniquely identifiable in a table. What happens if two records have the same ID?",
+    "hintTier2": "A primary key uniquely identifies each row in a table. It must be unique and cannot be NULL. It is used to establish relationships between tables.",
+    "hintTier3": "A primary key uniquely identifies each record. Rules: must be unique across all rows, cannot be NULL, should be immutable. Only one primary key per table. Serves as the reference target for foreign keys. Composite primary keys use multiple columns."
+  },
+  {
+    "id": "dbms_002",
+    "subject": "dbms",
+    "chapter": "SQL Commands",
+    "difficulty": 1,
+    "question": "Explain the difference between DELETE, TRUNCATE, and DROP in SQL.",
+    "keywords": ["DELETE / remove rows", "TRUNCATE / remove all rows", "DROP / remove table / remove structure", "rollback / transaction / cannot be rolled back", "WHERE clause"],
+    "keyConcepts": ["DELETE: removes specific rows, supports WHERE clause, can be rolled back", "TRUNCATE: removes ALL rows instantly, cannot be rolled back, keeps structure", "DROP: removes entire table including structure - permanent and irreversible", "Scope: DELETE removes rows, TRUNCATE removes all rows, DROP removes table"],
+    "hintTier1": "All three remove data, but at different levels. Think about what each one actually removes.",
+    "hintTier2": "DELETE removes specific rows based on a WHERE clause and can be rolled back. TRUNCATE removes all rows but keeps the table structure. DROP removes the entire table permanently.",
+    "hintTier3": "DELETE: DML command, removes specific rows matching WHERE clause, can be rolled back, fires triggers. TRUNCATE: DDL command, removes all rows instantly, cannot be rolled back, resets auto-increment, keeps structure. DROP: removes entire table including structure, indexes, constraints - completely irreversible."
+  },
+  {
+    "id": "dbms_003",
+    "subject": "dbms",
+    "chapter": "Normalization",
+    "difficulty": 1,
+    "question": "What is normalization in databases? Explain 1NF and 2NF with an example.",
+    "keywords": ["redundancy / duplicate data", "1NF / first normal form / atomic", "2NF / second normal form / partial dependency", "repeating groups / multiple values"],
+    "keyConcepts": ["1NF: atomic values in each cell, no repeating groups", "2NF: 1NF plus no partial dependencies on a composite key", "Goal: eliminate redundancy and improve data integrity", "Violation example: storing multiple phones in one column breaks 1NF"],
+    "hintTier1": "Normalization is about organizing tables to reduce redundancy. Think about what problems arise when the same data appears in multiple places.",
+    "hintTier2": "1NF: each column contains atomic values, no repeating groups. 2NF: the table is in 1NF and every non-key column is fully dependent on the entire primary key.",
+    "hintTier3": "Normalization organizes a database to reduce redundancy. 1NF: eliminate repeating groups, ensure each cell has one atomic value. 2NF: must be in 1NF plus no partial dependency on composite key. 3NF: must be in 2NF plus no transitive dependency."
+  },
+  {
+    "id": "dbms_004",
+    "subject": "dbms",
+    "chapter": "Transactions & ACID",
+    "difficulty": 2,
+    "question": "Explain the four ACID properties of database transactions with a real-world banking example.",
+    "keywords": ["atomicity / all or nothing", "consistency / valid state", "isolation / concurrent / independent", "durability / persist / survive failure"],
+    "keyConcepts": ["Atomicity: all operations succeed or all are rolled back", "Consistency: database moves from one valid state to another", "Isolation: concurrent transactions do not see each other's intermediate state", "Durability: committed changes survive system failures"],
+    "hintTier1": "ACID stands for four properties that guarantee database transactions are processed reliably. Think about what could go wrong in a bank transfer if any property were missing.",
+    "hintTier2": "Atomicity: all-or-nothing. Consistency: database moves from one valid state to another. Isolation: concurrent transactions do not interfere. Durability: committed changes survive failures.",
+    "hintTier3": "Atomicity: all operations succeed or all rolled back. Bank transfer: debit and credit must both happen or neither. Consistency: transaction brings DB from one valid state to another. Isolation: concurrent transactions isolated from each other's intermediate states. Durability: committed changes persist even after crashes."
+  },
+  {
+    "id": "dbms_005",
+    "subject": "dbms",
+    "chapter": "SQL Joins",
+    "difficulty": 2,
+    "question": "What is a JOIN in SQL? Explain the difference between INNER JOIN, LEFT JOIN, and RIGHT JOIN.",
+    "keywords": ["INNER JOIN / matching rows", "LEFT JOIN / all rows left / NULL", "RIGHT JOIN / all rows right", "ON / join condition / related column"],
+    "keyConcepts": ["INNER JOIN: only rows matching in BOTH tables", "LEFT JOIN: ALL rows from left table, NULLs where no right match", "RIGHT JOIN: mirror of LEFT JOIN", "JOIN condition typically matches primary key to foreign key"],
+    "hintTier1": "A JOIN combines rows from two or more tables based on a related column. Think about what happens to rows that do not have a match in the other table.",
+    "hintTier2": "INNER JOIN returns only rows where there is a match in both tables. LEFT JOIN returns all rows from the left table plus matching rows from the right (NULLs for no match). RIGHT JOIN is the mirror of LEFT JOIN.",
+    "hintTier3": "INNER JOIN: returns rows where join condition matches in BOTH tables. LEFT JOIN: returns ALL rows from left table, NULL fills right-side columns where no match. RIGHT JOIN: mirror of LEFT JOIN. FULL OUTER JOIN: all rows from both tables."
+  }
+]

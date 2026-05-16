@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="32dp">
+
+        <!-- Drag handle -->
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorBorder"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Contextual result label -->
+        <TextView
+            android:id="@+id/tv_reveal_hint_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorCorrect"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Tank change -->
+        <TextView
+            android:id="@+id/tv_reveal_tank_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="12sp"
+            android:layout_marginBottom="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBorder"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Question label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUESTION"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="11sp"
+            android:letterSpacing="0.12"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/tv_reveal_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="13sp"
+            android:lineSpacingMultiplier="1.4"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Key concepts label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KEY CONCEPTS"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="11sp"
+            android:letterSpacing="0.12"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Bullet concepts injected programmatically -->
+        <LinearLayout
+            android:id="@+id/ll_key_concepts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorHintTier3Bg"
+            android:padding="14dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Primary action: close -->
+        <Button
+            android:id="@+id/btn_reveal_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Got it — back to subjects"
+            android:textColor="@color/colorTextSecondary"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:textSize="12sp"/>
+
+        <!-- Secondary action: AI Mirror — independent submissions only -->
+        <Button
+            android:id="@+id/btn_compare_ai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/colorTextSecondary"
+            android:text="Compare your answer with AI →"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</ScrollView>

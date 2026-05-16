@@ -1,0 +1,42 @@
+[
+  {
+    "id": "dbms_case_001",
+    "subject": "dbms",
+    "topic": "SQL Joins",
+    "aiResponse": "SQL JOINs are used to combine rows from two or more tables based on a related column. An INNER JOIN returns all rows from both tables, including rows that have no match in the other table. A LEFT JOIN returns only the rows where there is a match in both tables, while a RIGHT JOIN returns all rows from the right table plus any unmatched rows from the left table filled with NULL values. The ON clause specifies the join condition, typically matching a primary key in one table to a foreign key in another. JOINs are one of the most powerful features of relational databases because they allow data to be split across tables and recombined efficiently.",
+    "errors": [
+      {
+        "errorText": "An INNER JOIN returns all rows from both tables, including rows that have no match",
+        "correct": "INNER JOIN returns only rows that have a match in BOTH tables",
+        "explanation": "INNER JOIN is the most restrictive join — it returns ONLY rows where the join condition matches in both tables. Rows without a match are excluded entirely. It is OUTER JOINs that include non-matching rows.",
+        "difficulty": "easy"
+      },
+      {
+        "errorText": "A LEFT JOIN returns only the rows where there is a match in both tables",
+        "correct": "LEFT JOIN returns ALL rows from the left table, with NULLs for non-matching right rows",
+        "explanation": "A LEFT JOIN returns ALL rows from the LEFT table regardless of match, plus matching rows from the right. Where no match exists, right-side columns are NULL. The description given is actually INNER JOIN behavior.",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  {
+    "id": "dbms_case_002",
+    "subject": "dbms",
+    "topic": "ACID Properties",
+    "aiResponse": "ACID stands for Atomicity, Consistency, Isolation, and Dependency. Atomicity means that a transaction is treated as a single unit — it either completes entirely or not at all. Consistency ensures that a transaction brings the database from one valid state to another invalid state. Isolation means that concurrent transactions execute independently without interfering with each other. Durability guarantees that once a transaction is committed, it remains committed even in the case of a system failure. These four properties are essential for maintaining data integrity in relational database systems.",
+    "errors": [
+      {
+        "errorText": "Atomicity, Consistency, Isolation, and Dependency",
+        "correct": "Atomicity, Consistency, Isolation, and Durability",
+        "explanation": "The D in ACID stands for DURABILITY — not Dependency. Durability guarantees that committed transactions persist even after system crashes.",
+        "difficulty": "easy"
+      },
+      {
+        "errorText": "brings the database from one valid state to another invalid state",
+        "correct": "brings the database from one valid state to another VALID state",
+        "explanation": "Consistency means the database moves from one VALID state to another VALID state. All rules, constraints, and integrity conditions must hold before and after the transaction.",
+        "difficulty": "medium"
+      }
+    ]
+  }
+]

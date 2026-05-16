@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Root node -->
+    <path
+        android:pathData="M9.5,5 a2.5,2.5 0 1 0 5,0 a2.5,2.5 0 1 0 -5,0"
+        android:fillColor="#FFFFFF" />
+
+    <!-- Left child node -->
+    <path
+        android:pathData="M3.5,17 a2.5,2.5 0 1 0 5,0 a2.5,2.5 0 1 0 -5,0"
+        android:fillColor="#FFFFFF" />
+
+    <!-- Right child node -->
+    <path
+        android:pathData="M15.5,17 a2.5,2.5 0 1 0 5,0 a2.5,2.5 0 1 0 -5,0"
+        android:fillColor="#FFFFFF" />
+
+    <!-- Line: root to left child -->
+    <path
+        android:pathData="M10.5,7 L6,14.5"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round" />
+
+    <!-- Line: root to right child -->
+    <path
+        android:pathData="M13.5,7 L18,14.5"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round" />
+
+</vector>

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "web_case_001",
+    "subject": "web",
+    "topic": "HTML, CSS and JavaScript",
+    "aiResponse": "In web development, the three core technologies each play a distinct role. HTML defines the visual styling of a page, determining colors, fonts, and layout. CSS is responsible for the structure and content, using tags like headings, paragraphs, and divs to organize information. JavaScript adds interactivity by manipulating the DOM, handling user events, and communicating with servers. Together these three technologies follow a principle called separation of concerns, which means keeping structure, presentation, and behavior in separate files for maintainability.",
+    "errors": [
+      {
+        "errorText": "HTML defines the visual styling of a page, determining colors, fonts, and layout",
+        "correct": "HTML defines the structure and content of a page",
+        "explanation": "HTML defines STRUCTURE and CONTENT — headings, paragraphs, links, images. Visual styling (colors, fonts, layout) is the responsibility of CSS, not HTML.",
+        "difficulty": "easy"
+      },
+      {
+        "errorText": "CSS is responsible for the structure and content, using tags like headings, paragraphs, and divs",
+        "correct": "CSS controls the visual presentation and styling",
+        "explanation": "CSS is responsible for VISUAL PRESENTATION — colors, fonts, spacing, layout. Tags like headings, paragraphs, and divs are HTML elements, not CSS. CSS uses selectors to target those HTML elements and apply styles.",
+        "difficulty": "easy"
+      }
+    ]
+  },
+  {
+    "id": "web_case_002",
+    "subject": "web",
+    "topic": "REST APIs",
+    "aiResponse": "A RESTful API is an architectural style for designing web services. REST stands for Reliable Encrypted State Transfer. One of the core principles of REST is that the server maintains session state between requests, allowing it to remember previous interactions with the client. RESTful APIs use standard HTTP methods: GET for retrieving data, POST for creating new resources, PUT for updating existing resources, and DELETE for removing resources. Resources are identified by URLs, and responses are typically formatted in JSON or XML. REST has become the dominant approach for building web APIs due to its simplicity and scalability.",
+    "errors": [
+      {
+        "errorText": "REST stands for Reliable Encrypted State Transfer",
+        "correct": "REST stands for Representational State Transfer",
+        "explanation": "REST stands for REPRESENTATIONAL STATE TRANSFER — coined by Roy Fielding in his 2000 doctoral dissertation. It has nothing to do with encryption.",
+        "difficulty": "easy"
+      },
+      {
+        "errorText": "the server maintains session state between requests",
+        "correct": "REST is stateless — the server does NOT maintain session state",
+        "explanation": "Statelessness is one of the core REST constraints. Each request must contain ALL information needed to process it. The server stores no session state between requests. This is fundamental to REST's scalability.",
+        "difficulty": "hard"
+      }
+    ]
+  }
+]

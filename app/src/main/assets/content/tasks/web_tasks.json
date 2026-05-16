@@ -1,0 +1,63 @@
+[
+  {
+    "id": "web_001",
+    "subject": "web",
+    "chapter": "Web Fundamentals",
+    "difficulty": 1,
+    "question": "What is the difference between HTML, CSS, and JavaScript? What is each one responsible for in a web page?",
+    "keywords": ["HTML / structure / content / markup", "CSS / style / presentation / design", "JavaScript / behavior / interactivity / dynamic", "separation of concerns"],
+    "keyConcepts": ["HTML: structure and content - the skeleton", "CSS: visual presentation - colors, fonts, layout", "JavaScript: behavior and interactivity - actions and events", "Separation of concerns: keep structure, style, behavior separate"],
+    "hintTier1": "Think of a web page as a building. Each of the three technologies handles a different layer of that building.",
+    "hintTier2": "HTML provides the structure and content. CSS controls the visual presentation. JavaScript adds interactivity and dynamic behavior.",
+    "hintTier3": "HTML defines the structure using elements like headings, paragraphs, links. CSS controls layout, colors, fonts via selectors. JavaScript manipulates the DOM, handles events, fetches data. Separation of concerns: keep structure (HTML), presentation (CSS), and behavior (JS) in separate files."
+  },
+  {
+    "id": "web_002",
+    "subject": "web",
+    "chapter": "CSS Box Model",
+    "difficulty": 1,
+    "question": "Explain the CSS box model. What are the four layers every HTML element is composed of?",
+    "keywords": ["content", "padding", "border", "margin"],
+    "keyConcepts": ["Content: the actual text or image (innermost)", "Padding: space between content and border", "Border: visible line around padding and content", "Margin: space outside the border, separating from other elements"],
+    "hintTier1": "Every element in CSS is represented as a rectangular box. Think about the layers moving from the inside content outward.",
+    "hintTier2": "From inside out: content (the actual text or image), padding (space between content and border), border (visible line around the element), margin (space between this element and others).",
+    "hintTier3": "The CSS box model: Content, Padding, Border, Margin from inside out. Content holds the actual data. Padding adds inner spacing. Border surrounds the element and can have style, width, and color. Margin creates outer spacing between elements. Using box-sizing: border-box includes padding and border inside the defined width and height."
+  },
+  {
+    "id": "web_003",
+    "subject": "web",
+    "chapter": "HTTP & Networking",
+    "difficulty": 1,
+    "question": "What happens during the HTTP request-response cycle when you enter a URL into a browser?",
+    "keywords": ["DNS / domain name / IP address", "TCP / connection / handshake", "GET / HTTP request", "response / status code / 200"],
+    "keyConcepts": ["DNS resolves domain name to IP address", "TCP handshake establishes connection to server", "Browser sends HTTP GET request with headers", "Server responds with status code (200 OK) and HTML body"],
+    "hintTier1": "Trace the journey: your browser needs to find the server, ask it for a resource, and display what it gets back.",
+    "hintTier2": "1. DNS resolves the domain name to an IP address. 2. Browser opens a TCP connection. 3. Browser sends an HTTP GET request. 4. Server sends back an HTTP response. 5. Browser renders the HTML.",
+    "hintTier3": "The full process includes: URL parsing, DNS lookup (domain to IP), TCP handshake, optional TLS setup for HTTPS, HTTP request (GET /path with headers), server-side processing, and receiving an HTTP response containing a status code, headers, and body. The browser then builds the DOM, applies CSS, runs JavaScript, and renders the page."
+  },
+  {
+    "id": "web_004",
+    "subject": "web",
+    "chapter": "HTTP Methods",
+    "difficulty": 2,
+    "question": "What is the difference between GET and POST HTTP methods? When should you use each one?",
+    "keywords": ["GET / retrieve / read", "POST / send / submit / create", "URL / query string / parameters", "body / request body", "idempotent / cache / cacheable"],
+    "keyConcepts": ["GET: retrieves data, parameters in URL, cacheable, idempotent", "POST: sends data in request body, not cached, for creating resources", "GET has URL length limits; POST has no practical size limit", "Both need HTTPS - POST is not inherently more secure without it"],
+    "hintTier1": "Think about the nature of the operation: are you retrieving data or sending data to be processed?",
+    "hintTier2": "GET retrieves data and sends parameters in the URL - visible, bookmarkable, cacheable. POST sends data in the request body - used for forms, file uploads, creating resources.",
+    "hintTier3": "GET is used to retrieve or read data from a server. Data is sent through the URL, making requests bookmarkable and cacheable (GET requests should not change server data). POST is used to send data to the server, usually through the request body, for actions like form submission or creating new resources. POST requests are not typically cached and can modify server data. In REST APIs: GET=read, POST=create, PUT=update, DELETE=remove resources."
+  },
+  {
+    "id": "web_005",
+    "subject": "web",
+    "chapter": "REST APIs",
+    "difficulty": 2,
+    "question": "What is a REST API? What are the key principles that make an API RESTful?",
+    "keywords": ["stateless / no session / no server state", "resource / URL / endpoint", "GET POST PUT DELETE / HTTP methods / CRUD", "client server / separation", "uniform interface"],
+    "keyConcepts": ["Stateless: each request contains all info needed - no server session", "Resources identified by URLs: /users/123", "HTTP verbs map to CRUD: GET=read, POST=create, PUT=update, DELETE=remove", "Uniform interface: consistent, predictable URL and verb structure"],
+    "hintTier1": "REST stands for Representational State Transfer. Think about what makes a web API predictable, stateless, and resource-based.",
+    "hintTier2": "A REST API uses standard HTTP methods to perform CRUD operations on resources identified by URLs. Key principles: stateless, uniform interface, client-server separation.",
+    "hintTier3": "REST stands for Representational State Transfer. RESTful APIs follow principles such as stateless communication - each request contains all information needed, no server-side session. Client-server separation, and a uniform interface. Resources are represented by URLs like /users or /users/123, while HTTP methods map to CRUD operations: GET for reading, POST for creating, PUT for updating, and DELETE for removing resources."
+
+  }
+]

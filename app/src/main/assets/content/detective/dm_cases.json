@@ -1,0 +1,48 @@
+[
+  {
+    "id": "dm_case_001",
+    "subject": "dm",
+    "topic": "Supervised vs Unsupervised Learning",
+    "aiResponse": "Data mining techniques can be broadly categorized into supervised and unsupervised learning. In supervised learning, the algorithm works with unlabeled data and must discover structure on its own without any guidance. Common supervised learning tasks include clustering and association rule mining. In unsupervised learning, the training data includes both input features and correct output labels, allowing the algorithm to learn a mapping from inputs to outputs. Classification and regression are examples of unsupervised learning tasks. The choice between the two approaches depends on whether labeled training data is available.",
+    "errors": [
+      {
+        "errorText": "In supervised learning, the algorithm works with unlabeled data and must discover structure on its own",
+        "correct": "That describes unsupervised learning. Supervised learning uses LABELED data.",
+        "explanation": "SUPERVISED learning uses LABELED training data — each example has a known correct output. The algorithm learns a mapping. It is UNSUPERVISED learning that works with unlabeled data and discovers hidden structure.",
+        "difficulty": "easy"
+      },
+      {
+        "errorText": "Common supervised learning tasks include clustering and association rule mining",
+        "correct": "Clustering and association rule mining are UNSUPERVISED tasks",
+        "explanation": "Clustering and association rule mining are UNSUPERVISED learning tasks — they find patterns in unlabeled data. Supervised tasks include classification and regression.",
+        "difficulty": "medium"
+      },
+      {
+        "errorText": "Classification and regression are examples of unsupervised learning tasks",
+        "correct": "Classification and regression are SUPERVISED learning tasks",
+        "explanation": "Classification (predicting a category) and regression (predicting a number) are both SUPERVISED tasks — they require labeled training data with known correct outputs.",
+        "difficulty": "easy"
+      }
+    ]
+  },
+  {
+    "id": "dm_case_002",
+    "subject": "dm",
+    "topic": "Association Rule Mining",
+    "aiResponse": "Association rule mining is a technique used to discover interesting relationships between variables in large datasets. The most common application is market basket analysis. An association rule takes the form X → Y, meaning if X is purchased then Y is likely purchased. Support measures how often a specific itemset appears as a proportion of all transactions — high support means the rule applies to a large portion of the data. Confidence measures how often Y occurs in all transactions regardless of X. Lift values greater than zero indicate a positive association between X and Y, while lift equal to one means the items are negatively associated.",
+    "errors": [
+      {
+        "errorText": "Confidence measures how often Y occurs in all transactions regardless of X",
+        "correct": "Confidence = freq(X,Y) / freq(X) — how often Y occurs GIVEN X occurs",
+        "explanation": "Confidence is a CONDITIONAL measure: given that X is in the transaction, how often is Y also present? It is NOT how often Y appears in all transactions — that is simply the Support of Y.",
+        "difficulty": "hard"
+      },
+      {
+        "errorText": "Lift values greater than zero indicate a positive association",
+        "correct": "Lift GREATER THAN ONE indicates positive association",
+        "explanation": "Lift is interpreted relative to 1, not 0. Lift > 1: positive association (X and Y co-occur more than by chance). Lift = 1: X and Y are independent. Lift < 1: negative association. Lift is always positive — it cannot be less than zero.",
+        "difficulty": "medium"
+      }
+    ]
+  }
+]

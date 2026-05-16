@@ -1,0 +1,62 @@
+[
+  {
+    "id": "dm_001",
+    "subject": "dm",
+    "chapter": "What is Data Mining",
+    "difficulty": 1,
+    "question": "What is data mining? How is it different from traditional database querying?",
+    "keywords": ["pattern / hidden pattern / discover", "large dataset / large data", "unknown / not know / automatic", "KDD / knowledge discovery"],
+    "keyConcepts": ["Data mining: automatically discovers hidden patterns in large datasets", "Traditional query: you know what you are looking for", "Data mining: discovers patterns you did not know existed", "KDD process: select, preprocess, transform, mine, interpret"],
+    "hintTier1": "Traditional querying retrieves data you already know exists. Data mining does something different - think about discovery vs. retrieval.",
+    "hintTier2": "Data mining automatically discovers useful patterns from large datasets. Traditional querying retrieves specific known data. Data mining discovers previously unknown patterns.",
+    "hintTier3": "Data mining automatically discovers patterns, correlations, anomalies from large datasets. Traditional DB querying: you know what you are looking for. Data mining: the algorithm finds what you did not know existed. KDD process: selection, preprocessing, transformation, mining, interpretation."
+  },
+  {
+    "id": "dm_002",
+    "subject": "dm",
+    "chapter": "Supervised vs Unsupervised",
+    "difficulty": 1,
+    "question": "What is the difference between supervised and unsupervised learning in data mining?",
+    "keywords": ["supervised / labeled / label", "unsupervised / unlabeled / no label", "classification / regression", "clustering / association"],
+    "keyConcepts": ["Supervised: trains on labeled data (input plus known correct output)", "Unsupervised: no labels - finds hidden structure in data", "Supervised tasks: classification, regression", "Unsupervised tasks: clustering, association rule mining"],
+    "hintTier1": "The key difference is whether you provide labeled examples to train on. Think about learning with a teacher vs. learning by finding patterns yourself.",
+    "hintTier2": "Supervised learning trains on labeled data - each example has an input and a known correct output. Unsupervised learning works with unlabeled data and finds hidden structure on its own.",
+    "hintTier3": "Supervised: trains on labeled dataset pairs. Types: Classification (category output) and Regression (number output). Unsupervised: no labeled output. Types: Clustering (group similar items), Association rule mining (find co-occurring items)."
+  },
+  {
+    "id": "dm_003",
+    "subject": "dm",
+    "chapter": "Classification",
+    "difficulty": 1,
+    "question": "What is classification in data mining? Give two real-world examples and name one algorithm used for it.",
+    "keywords": ["supervised / labeled training", "predefined class / category / label", "decision tree / naive bayes / KNN / algorithm", "accuracy / precision / recall / evaluation"],
+    "keyConcepts": ["Supervised task: assigns input to a predefined category", "Requires labeled training data with known correct outputs", "Common algorithms: Decision Tree, Naive Bayes, K-Nearest Neighbors", "Evaluation metrics: accuracy, precision, recall, F1-score"],
+    "hintTier1": "Classification assigns input data to a predefined category. Think about situations where you need to sort things into predefined buckets.",
+    "hintTier2": "Classification is a supervised learning task that assigns each input to one of a set of predefined classes. Examples: email spam detection, disease diagnosis. A common algorithm is the Decision Tree.",
+    "hintTier3": "Classification: supervised task - model learns from labeled training data to assign new instances to predefined classes. Common algorithms: Decision Tree, Naive Bayes, K-Nearest Neighbors, SVM. Evaluation: accuracy, precision, recall, F1-score."
+  },
+  {
+    "id": "dm_004",
+    "subject": "dm",
+    "chapter": "Clustering & K-Means",
+    "difficulty": 2,
+    "question": "What is clustering? How does K-Means clustering work? What is the key difference between clustering and classification?",
+    "keywords": ["unsupervised / no label", "centroid / cluster center", "K / number of clusters", "assign / nearest / distance", "iterate / repeat / converge"],
+    "keyConcepts": ["Clustering is unsupervised - no predefined labels or classes", "K-Means: assign points to nearest centroid, recalculate centroids, repeat", "K = number of clusters chosen before running the algorithm", "Classification (supervised) vs Clustering (unsupervised)"],
+    "hintTier1": "Both group data, but clustering does not use labels. Think about what happens when you do not know the categories in advance.",
+    "hintTier2": "Clustering is an unsupervised technique that groups similar data points together without predefined labels. K-Means works by choosing K cluster centers, assigning each point to the nearest center, then updating centers iteratively until stable.",
+    "hintTier3": "Clustering is unsupervised - no labels, no predefined classes. K-Means: 1. Choose K. 2. Initialize K centroids. 3. Assign each point to nearest centroid. 4. Recalculate centroids as mean. 5. Repeat until convergence. Classification is supervised. Clustering discovers natural groupings."
+  },
+  {
+    "id": "dm_005",
+    "subject": "dm",
+    "chapter": "Association Rules",
+    "difficulty": 2,
+    "question": "What is association rule mining? Explain support, confidence, and lift with a supermarket example.",
+    "keywords": ["support / frequency / proportion", "confidence / conditional / given", "lift / positive association / greater than 1", "apriori / frequent itemset", "market basket / co-occur"],
+    "keyConcepts": ["Support: how often the itemset appears across all transactions", "Confidence: given X is bought, how often is Y bought", "Lift greater than 1: positive association - items co-occur more than by chance", "Apriori algorithm: generates frequent itemsets using min-support threshold"],
+    "hintTier1": "Association rule mining finds items that frequently appear together. The classic example is market basket analysis - what products do customers buy together?",
+    "hintTier2": "Support measures how often the itemset appears in all transactions. Confidence measures how often Y is bought given X is bought. Lift measures how much more likely Y is given X compared to Y alone.",
+    "hintTier3": "Association rule: X implies Y. Support: proportion of transactions containing both X and Y. Confidence: freq(X,Y)/freq(X). Lift: Confidence divided by Support(Y). Lift greater than 1 means positive association. Lift equal to 1 means independent. Apriori generates frequent itemsets using minimum support, then rules using minimum confidence."
+  }
+]

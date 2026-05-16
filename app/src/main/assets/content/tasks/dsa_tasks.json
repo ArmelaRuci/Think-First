@@ -1,0 +1,62 @@
+[
+  {
+    "id": "dsa_001",
+    "subject": "dsa",
+    "chapter": "Arrays & Linked Lists",
+    "difficulty": 1,
+    "question": "What is an array and how does it differ from a linked list? Explain with a real-world analogy.",
+    "keywords": ["contiguous / adjacent memory", "O(1) / constant time access", "pointer / node", "fixed size / dynamic size / dynamic"],
+    "keyConcepts": ["Arrays use contiguous memory - O(1) access by index", "Linked lists use nodes with pointers - O(1) insert/delete at known position", "Arrays are fixed size; linked lists grow and shrink dynamically", "Trade-off: random access (array) vs flexible insertion (linked list)"],
+    "hintTier1": "Think about how you would store a list of items where you know the exact number of items vs. a list that grows and shrinks.",
+    "hintTier2": "An array stores elements in contiguous memory with fixed size. A linked list stores elements as nodes each pointing to the next. Array = a row of lockers. Linked list = a scavenger hunt.",
+    "hintTier3": "An array is a fixed-size contiguous block of memory. Access is O(1) by index but insertion/deletion is O(n) - can be slow because other elements may need to shift. A linked list uses nodes with a value and a pointer to the next node. Access is O(n) but insertion/deletion at a known node is O(1)."
+  },
+  {
+    "id": "dsa_002",
+    "subject": "dsa",
+    "chapter": "Stacks",
+    "difficulty": 1,
+    "question": "Explain the concept of a stack. What are its two main operations and what does LIFO mean?",
+    "keywords": ["LIFO / last in first out", "push", "pop", "top / stack top"],
+    "keyConcepts": ["LIFO - Last In First Out", "push(): add element to the top", "pop(): remove element from the top", "Real uses: undo operations, browser history, function call stack"],
+    "hintTier1": "Think of a physical stack of plates. How do you add and remove plates?",
+    "hintTier2": "A stack follows Last In First Out (LIFO). The two main operations are push (add to top) and pop (remove from top).",
+    "hintTier3": "A stack is a linear data structure following LIFO. Operations: push(item) adds to the top, pop() removes from the top, peek() reads the top without removing. Time complexity: O(1) for all three."
+  },
+  {
+    "id": "dsa_003",
+    "subject": "dsa",
+    "chapter": "Queues",
+    "difficulty": 1,
+    "question": "What is a queue? How does it differ from a stack? Give one real-world example.",
+    "keywords": ["FIFO / first in first out", "enqueue / add to rear", "dequeue / remove from front", "front / rear / back"],
+    "keyConcepts": ["FIFO - First In First Out", "enqueue(): add to rear - dequeue(): remove from front", "Opposite of stack: first added is first removed", "Real uses: print queue, CPU scheduling, BFS graph traversal"],
+    "hintTier1": "Think about waiting in line at a ticket counter. Who gets served first?",
+    "hintTier2": "A queue follows FIFO - First In First Out. You enqueue at the rear and dequeue from the front. Unlike a stack (LIFO), the first item added is the first one removed.",
+    "hintTier3": "A queue is a linear data structure following FIFO. Operations: enqueue (add to rear), dequeue (remove from front), peek (view front). O(1) for all operations. Variants: circular queue, priority queue, deque."
+  },
+  {
+    "id": "dsa_004",
+    "subject": "dsa",
+    "chapter": "Algorithm Analysis",
+    "difficulty": 2,
+    "question": "Explain Big O notation. What does O(n), O(1), and O(n^2) mean in terms of algorithm performance?",
+    "keywords": ["worst case / upper bound", "O(1) / constant", "O(n) / linear", "O(n2) / quadratic / nested loops", "input size / grows"],
+    "keyConcepts": ["Big O describes worst-case time complexity as input n grows", "O(1): constant - one operation regardless of input size", "O(n): linear - work grows proportionally with input", "O(n^2): quadratic - nested loops, grows with square of input"],
+    "hintTier1": "Big O describes how the runtime of an algorithm scales as input size grows. Think about what happens when you double the input.",
+    "hintTier2": "O(1) = constant time. O(n) = linear - grows proportionally with input. O(n^2) = quadratic - grows with the square of input, typical of nested loops.",
+    "hintTier3": "Big O describes worst-case time complexity as n approaches infinity. O(1): constant. O(log n): logarithmic. O(n): linear. O(n log n): efficient sorting. O(n^2): quadratic nested loops. O(2^n): exponential."
+  },
+  {
+    "id": "dsa_005",
+    "subject": "dsa",
+    "chapter": "Trees & BST",
+    "difficulty": 2,
+    "question": "What is a binary search tree (BST)? What property must every node satisfy? What is the time complexity for search?",
+    "keywords": ["left subtree / smaller / less than", "right subtree / greater / larger", "O(log n) / logarithmic", "balanced / unbalanced", "height / depth"],
+    "keyConcepts": ["Left subtree: all values smaller than the node", "Right subtree: all values larger than the node", "Search time: O(log n) balanced, O(n) worst case degenerate", "Self-balancing variants: AVL tree, Red-Black tree"],
+    "hintTier1": "Think about how a BST is organized. For any given node, where do smaller values go and where do larger values go?",
+    "hintTier2": "In a BST, every node's left subtree contains only values less than the node, and the right subtree contains only values greater.",
+    "hintTier3": "A BST satisfies: all left subtree values less than node, all right subtree values greater. Search is O(h) where h is tree height. Balanced BST: O(log n). Degenerate BST: O(n). AVL and Red-Black trees guarantee O(log n)."
+  }
+]

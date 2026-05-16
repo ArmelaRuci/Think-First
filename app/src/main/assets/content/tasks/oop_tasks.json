@@ -1,0 +1,63 @@
+[
+  {
+    "id": "oop_001",
+    "subject": "oop",
+    "chapter": "OOP Principles",
+    "difficulty": 1,
+    "question": "What are the four main principles of Object Oriented Programming? Give a one-sentence explanation of each.",
+    "keywords": ["abstraction / hide complexity", "encapsulation / restrict access / private", "inheritance / parent class / subclass / extends", "polymorphism / many forms / overriding"],
+    "keyConcepts": ["Abstraction: hide complexity, expose only what is necessary", "Encapsulation: bundle data and methods, restrict direct access", "Inheritance: subclass acquires properties of parent class", "Polymorphism: one interface, many implementations"],
+    "hintTier1": "The four principles have a well-known acronym: A-PIE. Each one addresses a different aspect of how objects are structured and interact.",
+    "hintTier2": "Abstraction: hiding complex implementation details. Polymorphism: one interface many implementations. Inheritance: a class acquires properties from a parent class. Encapsulation: bundling data and methods together and restricting direct access.",
+    "hintTier3": "Abstraction: exposing only what is necessary, hiding internal complexity. Encapsulation: wrapping data and methods in a class, controlling access via private/public. Inheritance: subclass inherits fields and methods from superclass, enabling code reuse. Polymorphism: objects of different classes treated as objects of a common superclass."
+  },
+  {
+    "id": "oop_002",
+    "subject": "oop",
+    "chapter": "Classes & Objects",
+    "difficulty": 1,
+    "question": "What is the difference between a class and an object? Explain using a real-world analogy.",
+    "keywords": ["class / blueprint / template", "object / instance", "new / instantiate / create", "memory / allocated at runtime"],
+    "keyConcepts": ["Class: blueprint/template - no memory allocated for data", "Object: instance of a class - memory allocated at runtime", "One class can produce many objects, each with independent state", "new keyword creates an object from a class in Java"],
+    "hintTier1": "Think about the relationship between a blueprint and an actual building, or a cookie cutter and a cookie.",
+    "hintTier2": "A class is a blueprint that defines attributes and behaviors. An object is an instance - a specific realization of that class with actual values. You can create many objects from one class.",
+    "hintTier3": "A class is a user-defined data type defining fields (state) and methods (behavior) - no memory allocated for data. An object is an instance created at runtime using the new keyword. Memory is allocated for each object's fields independently."
+  },
+  {
+    "id": "oop_003",
+    "subject": "oop",
+    "chapter": "Inheritance",
+    "difficulty": 1,
+    "question": "Explain inheritance in OOP. What is the difference between a superclass and a subclass? What is method overriding?",
+    "keywords": ["superclass / parent class / base class", "subclass / child class / extends", "override / overriding / same method", "inherit / inherits / reuse"],
+    "keyConcepts": ["Superclass (parent): defines common attributes and methods", "Subclass (child): inherits all non-private members using extends", "Method overriding: subclass provides its own implementation of parent method", "@Override annotation confirms intentional override in Java"],
+    "hintTier1": "Think about how a child inherits traits from a parent but can also develop their own unique traits.",
+    "hintTier2": "A superclass defines common attributes and behaviors. A subclass inherits them and can add new ones or override existing ones. Method overriding means the subclass provides its own implementation of a method already in the superclass.",
+    "hintTier3": "Inheritance is an IS-A relationship. Superclass defines common attributes and methods. Subclass inherits all non-private members, can add or override. Method overriding: subclass provides specific implementation of method with same signature. Enables runtime polymorphism."
+  },
+  {
+    "id": "oop_004",
+    "subject": "oop",
+    "chapter": "Abstract Classes & Interfaces",
+    "difficulty": 2,
+    "question": "What is the difference between an abstract class and an interface in Java?",
+    "keywords": ["abstract class / abstract method / concrete method", "interface / implements", "multiple interface / multiple interfaces", "single inheritance / extends one / one class", "instance field / state / no fields"],
+    "keyConcepts": ["Abstract class: can have concrete and abstract methods, has state (fields)", "Interface: traditionally pure contract - no instance fields", "A class can extend only ONE abstract class", "A class can implement MULTIPLE interfaces simultaneously"],
+    "hintTier1": "Both define contracts that other classes must fulfill, but they differ in flexibility. Think about partial implementation vs. pure contract.",
+    "hintTier2": "An abstract class can have both abstract and concrete methods and can have state (fields). An interface defines only abstract methods and cannot have state. A class can implement multiple interfaces but extend only one abstract class.",
+    "hintTier3": "Abstract class: used when related classes share common code, fields, or functionality. It can have constructors, instance variables, abstract and concrete methods. Single inheritance only. Interface: defines a contract or capability that different classes can share. Traditionally contained only abstract methods (Java 8 plus allows default). A class uses extends for abstract classes and implements for interfaces."
+
+  },
+  {
+    "id": "oop_005",
+    "subject": "oop",
+    "chapter": "Encapsulation",
+    "difficulty": 2,
+    "question": "What is encapsulation? Explain getter/setter methods and their functionality",
+    "keywords": ["private / private field / access modifier", "getter / get method / accessor", "setter / set method / mutator", "validate / validation / control access", "information hiding / hide data"],
+    "keyConcepts": ["Private fields: not directly accessible from outside the class", "Getter: public method to read field value", "Setter: public method to write field value - can validate input", "Benefit: internal implementation can change without breaking external code"],
+    "hintTier1": "Encapsulation is about controlling access to an object's internal data. What problems arise if any class can directly change another class's fields?",
+    "hintTier2": "Encapsulation means making fields private and providing public getter and setter methods. This allows the class to validate input, control what is exposed, and change internal implementation without breaking code that uses it.",
+    "hintTier3": "Encapsulation bundles data and methods into a class and restricts direct access using private modifiers. Public getters return field values and can add logic. Public setters set values and can validate input. Benefits: validation before assignment, internal implementation can change without affecting external code."
+  }
+]

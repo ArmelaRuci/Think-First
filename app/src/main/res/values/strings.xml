@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">ThinkFirst</string>
+
+    <!-- Splash -->
+    <string name="splash_tagline">Think before you ask.</string>
+
+    <!-- Home -->
+    <string name="home_title">ThinkFirst</string>
+    <string name="home_subtitle">Your AI help budget. Use it wisely.</string>
+    <string name="home_choose_subject">Choose a subject</string>
+    <string name="home_btn_my_progress">My Progress</string>
+
+    <!-- Subjects (CS-focused) -->
+    <string name="subject_dsa">Data Structures &amp; Algorithms</string>
+    <string name="subject_dbms">Database Management Systems</string>
+    <string name="subject_web">Web Programming</string>
+    <string name="subject_oop">Object Oriented Programming</string>
+    <string name="subject_dm">Intro to Data Mining</string>
+
+    <!-- Task -->
+    <string name="task_hint_try_more">Try more first ↓</string>
+    <string name="task_hint_get_nudge">Get a nudge →</string>
+    <string name="task_hint_get_full">Get full guidance →</string>
+    <string name="task_btn_submit">Submit Answer</string>
+    <string name="task_btn_detective">Detective Mode</string>
+    <string name="task_record_start">Hold to record your attempt</string>
+    <string name="task_record_stop">Recording… tap to stop</string>
+    <string name="task_effort_label">Effort level</string>
+
+    <!-- Hint -->
+    <string name="hint_title">Your Hint</string>
+    <string name="hint_your_attempt">Your attempt:</string>
+    <string name="hint_reflection_q">Could you have gotten there yourself?</string>
+    <string name="hint_r_yes">Yes</string>
+    <string name="hint_r_probably">Probably</string>
+    <string name="hint_r_no">No</string>
+    <string name="hint_btn_back">← Back to Task</string>
+
+    <!-- Detective -->
+    <string name="detective_title">CatchTheAI</string>
+    <string name="detective_instructions">Read carefully. Long-press any phrase you think is wrong to flag it.</string>
+    <string name="detective_btn_submit">Submit findings</string>
+    <string name="detective_btn_share">Share result</string>
+    <string name="detective_share_text">I scored %1$d points catching AI errors on ThinkFirst! #ThinkFirst #AILiteracy</string>
+
+    <!-- Tank states -->
+    <string name="tank_label_full">Independent thinker</string>
+    <string name="tank_label_mid">Using AI wisely</string>
+    <string name="tank_label_low">Relying on hints too often</string>
+    <string name="tank_label_critical">Build your skills first!</string>
+
+    <!-- Detective ranks -->
+    <string name="rank_rookie">Rookie</string>
+    <string name="rank_investigator">Investigator</string>
+    <string name="rank_analyst">Analyst</string>
+    <string name="rank_senior">Senior Detective</string>
+    <string name="rank_chief">Chief Inspector</string>
+
+    <!-- General -->
+    <string name="permission_audio_required">Microphone permission is needed for voice attempts.</string>
+    <string name="coming_soon">Coming in a later stage</string>
+
+    <!-- AI Mirror -->
+    <string name="mirror_title">AI Mirror</string>
+    <string name="mirror_subtitle">You answered this independently. Compare your reasoning.</string>
+    <string name="mirror_your_answer_label">YOUR ANSWER</string>
+    <string name="mirror_ai_answer_label">WHAT AI WOULD TELL YOU</string>
+    <string name="mirror_covered_label">Something you covered that AI didn\'t mention:</string>
+    <string name="mirror_covered_hint">Your unique insight, analogy, or connection…</string>
+    <string name="mirror_missed_label">Something AI covered that you missed:</string>
+    <string name="mirror_missed_hint">A concept, detail, or case you didn\'t think of…</string>
+    <string name="mirror_btn_done">Done — back to subjects</string>
+    <string name="mirror_btn_skip">Skip comparison</string>
+    <string name="mirror_empty_warning">Please fill in at least one reflection field before finishing.</string>
+
+    <!-- AI Handoff -->
+    <string name="ai_handoff_title">Want to go deeper?</string>
+    <string name="ai_handoff_subtitle">You\'ve done the work. Continue the conversation with AI — your context is already prepared.</string>
+    <string name="ai_handoff_open_claude">Continue with Claude →</string>
+    <string name="ai_handoff_open_chatgpt">Continue with ChatGPT →</string>
+
+</resources>

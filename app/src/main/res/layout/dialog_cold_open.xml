@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/colorSurface">
+
+    <!-- Header label -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUICK RECALL"
+        android:textColor="@color/colorAccent"
+        android:textSize="11sp"
+        android:letterSpacing="0.12"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Instruction -->
+    <TextView
+        android:id="@+id/tv_cold_open_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You studied this before. Without looking anything up:"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="13sp"
+        android:lineSpacingMultiplier="1.4"
+        android:layout_marginBottom="16dp" />
+
+    <!-- The recall question -->
+    <TextView
+        android:id="@+id/tv_cold_open_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:padding="14dp"
+        android:text="Question appears here"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:lineSpacingMultiplier="1.4"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Student's recall answer -->
+    <EditText
+        android:id="@+id/et_cold_open_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:background="@color/colorBackground"
+        android:gravity="top|start"
+        android:hint="Write what you remember..."
+        android:inputType="textMultiLine|textCapSentences"
+        android:padding="12dp"
+        android:textColor="@color/colorTextPrimary"
+        android:textColorHint="@color/colorTextSecondary"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- No-pressure label -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is not graded. Just try to recall."
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="11sp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cold_open_skip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Skip"
+            android:textColor="@color/colorTextSecondary"
+            android:backgroundTint="@color/colorBackground"
+            style="?attr/borderlessButtonStyle" />
+
+        <Button
+            android:id="@+id/btn_cold_open_continue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Continue →"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

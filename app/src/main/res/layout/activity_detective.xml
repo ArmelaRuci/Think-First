@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <!-- ══ Always-visible header ══════════════════════════════════════════ -->
+
+    <!-- Top bar: title + rank badge on same row -->
+    <LinearLayout
+        android:id="@+id/ll_header_top"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="10dp"
+        android:background="@color/colorSurface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_detective_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/detective_title"
+            android:textColor="@color/colorDetectiveGold"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <!-- Rank badge -->
+        <TextView
+            android:id="@+id/tv_rank_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="@string/rank_rookie"
+            android:textColor="@color/colorDetectiveGold"
+            android:textSize="12sp"
+            android:drawablePadding="6dp" />
+
+    </LinearLayout>
+
+    <!-- Mode row: Hunt/Jury/Verdict label — styled as a pill -->
+    <LinearLayout
+        android:id="@+id/ll_header_mode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/colorSurface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_header_top">
+
+        <!-- Coloured left pip -->
+        <View
+            android:layout_width="3dp"
+            android:layout_height="16dp"
+            android:background="@color/colorDetectiveGold"
+            android:layout_marginEnd="10dp" />
+
+        <!-- Mode label -->
+        <TextView
+            android:id="@+id/tv_mode_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hunt Mode  ·  Find the planted errors"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Topic label row — sits below mode row -->
+    <TextView
+        android:id="@+id/tv_topic_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Loading case..."
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_header_mode" />
+
+    <!-- Thin divider between header and body -->
+    <View
+        android:id="@+id/v_header_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorBorder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_topic_label" />
+
+    <!-- ══ Phase body ══════════════════════════════════════════════════════ -->
+
+    <FrameLayout
+        android:id="@+id/fl_detective_body"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_topic_label">
+
+        <!-- ══ PHASE 1: Hunt Mode — Read & Flag ══════════════════════════ -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_phase1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <!-- Error count hint banner -->
+            <LinearLayout
+                android:id="@+id/ll_error_hint_banner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorSurface"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="This AI response contains errors. Find them."
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_error_count_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorHintTier2Bg"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="2 errors"
+                    android:textColor="@color/colorWarning"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Instructions -->
+            <TextView
+                android:id="@+id/tv_p1_instructions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/detective_instructions"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="12sp"
+                android:lineSpacingMultiplier="1.4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_error_hint_banner" />
+
+            <!-- Sentence cards scroll area -->
+            <ScrollView
+                android:id="@+id/sv_sentences"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/ll_p1_bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_p1_instructions">
+
+                <LinearLayout
+                    android:id="@+id/ll_sentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="8dp" />
+
+            </ScrollView>
+
+            <!-- Bottom bar -->
+            <LinearLayout
+                android:id="@+id/ll_p1_bottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="16dp"
+                android:background="@color/colorBackground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_flag_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0 sentences flagged"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btn_submit_findings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/detective_btn_submit"
+                    android:enabled="false"
+                    android:alpha="0.4" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ══ PHASE 2: Jury Mode — Select Verdict ═══════════════════════ -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/cl_phase2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="24dp">
+
+                <TextView
+                    android:id="@+id/tv_p2_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="For each flagged sentence, deliver your verdict:"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_verdict_cards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <Button
+                    android:id="@+id/btn_submit_final"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Submit final verdict" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- ══ PHASE 3: Verdict — Results & Score ════════════════════════
+             NestedScrollView so ALL reveal cards are always reachable.
+             Share button lives INSIDE the scroll — never clips content.  -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/cl_phase3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="32dp">
+
+                <!-- Score -->
+                <TextView
+                    android:id="@+id/tv_final_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Score: 0"
+                    android:textColor="@color/colorDetectiveGold"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="2dp" />
+
+                <!-- Summary line -->
+                <TextView
+                    android:id="@+id/tv_score_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0/0 errors caught"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Reveal cards — LinearLayout inside NestedScrollView
+                     so ALL cards are always fully visible and scrollable -->
+                <LinearLayout
+                    android:id="@+id/ll_reveal_cards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Share — inside scroll, always reachable -->
+                <Button
+                    android:id="@+id/btn_share_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/detective_btn_share" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

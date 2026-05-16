@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardBackgroundColor="@color/colorCardBackground"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <!-- The sentence the student flagged -->
+        <TextView
+            android:id="@+id/tv_flagged_sentence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorHintTier2Bg"
+            android:padding="10dp"
+            android:text="Flagged sentence"
+            android:textColor="@color/colorWarning"
+            android:textSize="13sp"
+            android:lineSpacingMultiplier="1.4"
+            android:layout_marginBottom="14dp" />
+
+        <!-- Verdict label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SELECT YOUR VERDICT:"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="11sp"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Verdict radio group — no justification field -->
+        <RadioGroup
+            android:id="@+id/rg_verdict"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_wrong_fact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wrong fact"
+                android:textColor="@color/colorTextPrimary"
+                android:buttonTint="@color/colorAccent"
+                android:paddingStart="8dp" />
+
+            <RadioButton
+                android:id="@+id/rb_misleading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Misleading statement"
+                android:textColor="@color/colorTextPrimary"
+                android:buttonTint="@color/colorAccent"
+                android:paddingStart="8dp" />
+
+            <RadioButton
+                android:id="@+id/rb_fabricated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fabricated or made up"
+                android:textColor="@color/colorTextPrimary"
+                android:buttonTint="@color/colorAccent"
+                android:paddingStart="8dp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

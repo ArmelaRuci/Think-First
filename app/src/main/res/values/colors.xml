@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ── Brand ─────────────────────────────────────── -->
+    <color name="colorPrimary">#1A1A2E</color>
+    <color name="colorPrimaryVariant">#16213E</color>
+    <color name="colorAccent">#58A6FF</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+
+    <!-- ── Backgrounds ───────────────────────────────── -->
+    <color name="colorBackground">#0D1117</color>
+    <color name="colorSurface">#161B22</color>
+    <color name="colorCardBackground">#21262D</color>
+
+    <!-- ── Text ──────────────────────────────────────── -->
+    <color name="colorTextPrimary">#F0F6FC</color>
+    <color name="colorTextSecondary">#8B949E</color>
+
+    <!-- ── Borders ────────────────────────────────────── -->
+    <color name="colorBorder">#30363D</color>
+
+    <!-- ── Tank gauge states ──────────────────────────── -->
+    <color name="colorTankFull">#238636</color>
+    <color name="colorTankMid">#FFC107</color>
+    <color name="colorTankLow">#DA3633</color>
+
+    <!-- ── Detective ──────────────────────────────────── -->
+    <color name="colorDetectiveGold">#E3B341</color>
+
+    <!-- ── Feedback ───────────────────────────────────── -->
+    <color name="colorCorrect">#238636</color>
+    <color name="colorWrong">#DA3633</color>
+<!--    <color name="colorWrongBg">#9C3230</color>-->
+    <color name="colorWarning">#D29922</color>
+
+    <!-- Hint tier card backgrounds (dark tints for our dark theme) -->
+    <color name="colorHintTier1Bg">#0D1F3C</color>
+    <color name="colorHintTier2Bg">#2A1E00</color>
+    <color name="colorHintTier3Bg">#0A2218</color>
+
+    <!-- Per-subject accent colors -->
+    <color name="colorSubjectDsa">#58A6FF</color>
+    <color name="colorSubjectDbms">#BC8CFF</color>
+    <color name="colorSubjectWeb">#3FB950</color>
+    <color name="colorSubjectOop">#FFA657</color>
+    <color name="colorSubjectDm">#FF7B72</color>
+    <color name="colorMissedBg">#1F0A0A</color>
+
+</resources>

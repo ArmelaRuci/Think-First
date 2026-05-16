@@ -1,0 +1,54 @@
+[
+  {
+    "id": "oop_case_001",
+    "subject": "oop",
+    "topic": "OOP Principles",
+    "aiResponse": "Object Oriented Programming is built on four core principles often remembered by the acronym A-PIE. Abstraction refers to bundling data and methods together inside a class and restricting outside access using private modifiers. Polymorphism allows a subclass to inherit attributes and behaviors from a parent class, enabling code reuse. Inheritance means one interface can have many implementations, allowing objects of different types to be treated uniformly. Encapsulation is the principle of hiding internal complexity and exposing only what is necessary through a simplified interface.",
+    "errors": [
+      {
+        "errorText": "Abstraction refers to bundling data and methods together inside a class and restricting outside access",
+        "correct": "That is Encapsulation, not Abstraction",
+        "explanation": "Bundling data and methods together and restricting outside access is ENCAPSULATION. Abstraction is about hiding complexity and exposing only essential features through a simplified interface.",
+        "difficulty": "hard"
+      },
+      {
+        "errorText": "Polymorphism allows a subclass to inherit attributes and behaviors from a parent class",
+        "correct": "That is Inheritance, not Polymorphism",
+        "explanation": "Inheriting attributes and behaviors from a parent class is INHERITANCE. Polymorphism means one interface, many implementations — the same method call produces different behavior depending on the actual object type.",
+        "difficulty": "medium"
+      },
+      {
+        "errorText": "Inheritance means one interface can have many implementations",
+        "correct": "That is Polymorphism, not Inheritance",
+        "explanation": "One interface with many implementations is POLYMORPHISM. Inheritance is the mechanism by which a subclass acquires the properties and behaviors of its parent class.",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  {
+    "id": "oop_case_002",
+    "subject": "oop",
+    "topic": "Abstract Classes and Interfaces",
+    "aiResponse": "In Java, both abstract classes and interfaces are used to achieve abstraction. An abstract class can only contain abstract methods — methods without a body. A concrete class can implement multiple abstract classes simultaneously using the extends keyword. Interfaces, on the other hand, can contain both abstract and concrete methods, and can have instance fields to store state. A class uses the implements keyword to use an interface, and is limited to implementing only one interface at a time. The general rule is to use abstract classes for defining capabilities that unrelated classes share, and interfaces when classes share a common base implementation.",
+    "errors": [
+      {
+        "errorText": "An abstract class can only contain abstract methods",
+        "correct": "Abstract classes can contain both abstract AND concrete methods",
+        "explanation": "An abstract class can have BOTH abstract methods (no body, must be overridden) and concrete methods (with a full implementation). If it could only have abstract methods it would be the same as an interface.",
+        "difficulty": "medium"
+      },
+      {
+        "errorText": "A concrete class can implement multiple abstract classes simultaneously",
+        "correct": "Java only allows single inheritance — a class can extend only ONE abstract class",
+        "explanation": "Java does NOT support multiple inheritance of classes. A class can extend only ONE abstract class. This is a key limitation that makes interfaces valuable — a class CAN implement multiple interfaces.",
+        "difficulty": "easy"
+      },
+      {
+        "errorText": "is limited to implementing only one interface at a time",
+        "correct": "A class can implement MULTIPLE interfaces",
+        "explanation": "Unlike abstract classes (single inheritance), a class can implement MULTIPLE interfaces simultaneously. This is one of the main advantages of interfaces over abstract classes.",
+        "difficulty": "easy"
+      }
+    ]
+  }
+]

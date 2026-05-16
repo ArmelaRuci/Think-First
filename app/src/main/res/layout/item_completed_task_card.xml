@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="@color/colorCardBackground"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="14dp">
+
+        <!-- Left accent bar -->
+        <View
+            android:id="@+id/view_card_accent"
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Chapter name — bold, single line -->
+        <TextView
+            android:id="@+id/tv_task_question_preview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Chapter Name"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_arrow_indicator"
+            app:layout_constraintStart_toEndOf="@+id/view_card_accent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/ll_task_meta"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <!-- Effort dots + badge row -->
+        <LinearLayout
+            android:id="@+id/ll_task_meta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/tv_arrow_indicator"
+            app:layout_constraintStart_toEndOf="@+id/view_card_accent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_task_question_preview"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <View
+                android:id="@+id/dot_effort_1"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_effort_dot"
+                android:layout_marginEnd="4dp" />
+
+            <View
+                android:id="@+id/dot_effort_2"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_effort_dot"
+                android:layout_marginEnd="4dp" />
+
+            <View
+                android:id="@+id/dot_effort_3"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_effort_dot"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:id="@+id/tv_hint_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorSurface"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="INDEPENDENT"
+                android:textColor="@color/colorCorrect"
+                android:textSize="10sp"
+                android:letterSpacing="0.06" />
+
+        </LinearLayout>
+
+        <!-- → static indicator — not clickable -->
+        <TextView
+            android:id="@+id/tv_arrow_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:text="→"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_retake"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- ↺ retake symbol — tappable -->
+        <TextView
+            android:id="@+id/btn_retake"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:text="↺"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
