@@ -229,13 +229,4 @@ Potential future extensions include:
 * real AI API integration
 * adaptive difficulty
 * spaced repetition system
-* analytics dashboard
 * multiplayer detective challenges
-* cloud sync
-* instructor monitoring tools
-
----
-
-# Authors
-
-Developed as an Android educational software engineering project focused on thoughtful AI-assisted learning.
